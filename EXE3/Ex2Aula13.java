@@ -12,6 +12,7 @@ public class Ex2Aula13 {
         Map<String,String> hm = new HashMap<>();
         String nome = "";
         String tel = "";
+        String prefixo = "";
         
         while(!nome.equals("*")){
             System.out.println("Digite um nome ('*' para finalizar)");
@@ -43,17 +44,18 @@ public class Ex2Aula13 {
             
             else if(menu == 2){
                 do{
-            
-                String prefixo;
-                System.out.println("Digite o nome da pessoa que está prcurando ('*' para finalizar)");
+
+                System.out.println("Digite o prefixo da pessoa que está prcurando ('*' para finalizar)");
                 prefixo = sc.nextLine();
                 if(nome.equals("*")) continue;
-                if( hm.containsValue(prefixo)){
-                    System.out.println(hm);
+        
+                if(hm.get(nome).startsWith(prefixo)){
+                System.out.println(hm);
                 }
         
-        
                }while(!nome.equals("*"));
+            
+            }
             
             }
                
